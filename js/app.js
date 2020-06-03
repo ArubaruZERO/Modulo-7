@@ -4,8 +4,8 @@
 // =============================================================================
 // CASO 1------ COMPROBAR IBAN-----------------------
 // =============================================================================
-const pattern = /([ES]{2}\d{2})(\d{4})(\d{4})(\d{2})(\d{10})/;
-const values = ["ES6600190020961234567890"];
+var pattern = /([ES]{2}\d{2})(\d{4})(\d{4})(\d{2})(\d{10})/;
+var values = ["ES6600190020961234567890"];
 
 
 values.forEach(value =>{ 
@@ -28,8 +28,8 @@ values.forEach(value =>{
 // CASO 3------ Extraer del IBAN pais y numero de control-----------------------
 // =============================================================================
 
-const pattern = /([ES]{2}\d{2})\s?(\d{4})\s?(\d{4})\s?(\d{2})\s?(\d{10})/;
-const values = ["ES6600190020961234567890"];
+var pattern = /([ES]{2}\d{2})\s?(\d{4})\s?(\d{4})\s?(\d{2})\s?(\d{10})/;
+var values = ["ES6600190020961234567890"];
 
 values.forEach(value =>{ 
     console.log("Regex matchs with" + value + "? ->", pattern.exec(value));
@@ -44,8 +44,8 @@ values.forEach(value =>{
 // CASO 1------ Validar matricula-----------------------
 // =============================================================================
 
-const pattern = /(\d{4})([\s\-\_\.])?([A-Z]{3})/;
-const values = ["2021 GMD" , "2345-GMD" , "4532BDB" , "0320-AAA" ];
+var pattern = /(\d{4})([\s\-\_\.])?([A-Z]{3})/;
+var values = ["2021 GMD" , "2345-GMD" , "4532BDB" , "0320-AAA" ];
 
 values.forEach(value =>{ 
     console.log("Regex matchs with" + value + "? ->", pattern.test(value));
@@ -56,8 +56,8 @@ values.forEach(value =>{
 // CASO 2------ Extraer parte numerica y las letras-----------------------
 // =============================================================================
 
-const pattern = /(\d{4})([\s\-\_\.])?([A-Z]{3})/;
-const values = ["2021 GMD" , "2345-GMD" , "4532BDB" , "0320-AAA" ];
+var pattern = /(\d{4})([\s\-\_\.])?([A-Z]{3})/;
+var values = ["2021 GMD" , "2345-GMD" , "4532BDB" , "0320-AAA" ];
 
 values.forEach(value =>{ 
     console.log("Regex matchs with" + value + "? ->", pattern.exec(value));
@@ -72,9 +72,8 @@ values.forEach(value =>{
 // =============================================================================
 // CASO 1------De una sola linea extraer el contenido de src----------------------
 // =============================================================================
-
-const pattern = /<img[^>]+src=[^>]*>/g
-const values = ["<img src=https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png/>"]
+var pattern = /<img[^>]+src=[^>]*>/g
+var values = ["<img src=https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png/>"]
 
 values.forEach(value =>{ 
     console.log("Regex matchs with" + value + "? ->", pattern.exec(value));
@@ -86,8 +85,8 @@ values.forEach(value =>{
 // =============================================================================
 
 
-const pattern = /<img[^>]+src=[^>]*>/gm
-const html = `
+var pattern = /<img[^>]+src=[^>]*>/gm
+var html = `
 html>
  <body>
  <img
@@ -113,8 +112,8 @@ console.log( html.match(pattern))
 // CASO 1------------Vamos a validar los siguiente formatos (todos válidos)
 // =============================================================================
 
-const pattern =/^([512345]{2}[\d]{2})([\.\-\s])?(\d{4})([\.\-\s])?(\d{4})([\.\-\s])?(\d{4})/
-const values= ["5299 6400 0000 0000", "5299-6400-0000-0000", "5299640000000000"]
+var pattern =/^([512345]{2}[\d]{2})([\.\-\s])?(\d{4})([\.\-\s])?(\d{4})([\.\-\s])?(\d{4})/
+var values= ["5299 6400 0000 0000", "5299-6400-0000-0000", "5299640000000000"]
 values.forEach(value =>{ 
     console.log("Regex matchs with" + value + "? ->", pattern.test(value));
 });
@@ -126,8 +125,8 @@ values.forEach(value =>{
 
 
 
-const pattern =/^([512345]{2}[\d]{2})([\.\-\s])?(\d{4})([\.\-\s])?(\d{4})([\.\-\s])?(\d{4})/
-const values= ["5299 6400 0000 0000", "5299-6400-0000-0000", "5299640000000000"]
+var pattern =/^([512345]{2}[\d]{2})([\.\-\s])?(\d{4})([\.\-\s])?(\d{4})([\.\-\s])?(\d{4})/
+var values= ["5299 6400 0000 0000", "5299-6400-0000-0000", "5299640000000000"]
 values.forEach(value =>{ 
     console.log("Regex matchs with" + value + "? ->", pattern.exec(value));
 });
