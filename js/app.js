@@ -16,8 +16,8 @@ values.forEach(value =>{
 // CASO 2------ COMPROBAR IBAN con espacios-----------------------
 // =============================================================================
 
-const pattern = /([ES]{2}\d{2})\s?(\d{4})\s?(\d{4})\s?(\d{2})\s?(\d{10})/;
-const values = ["ES6600190020961234567890"];
+var pattern = /([ES]{2}\d{2})\s?(\d{4})\s?(\d{4})\s?(\d{2})\s?(\d{10})/;
+var values = ["ES6600190020961234567890"];
 
 values.forEach(value =>{ 
     console.log("Regex matchs with" + value + "? ->", pattern.test(value));
@@ -112,7 +112,7 @@ console.log( html.match(pattern))
 // CASO 1------------Vamos a validar los siguiente formatos (todos válidos)
 // =============================================================================
 
-var pattern =/^([512345]{2}[\d]{2})([\.\-\s])?(\d{4})([\.\-\s])?(\d{4})([\.\-\s])?(\d{4})/
+var pattern =/^([51|52|53|54|55]{2}[\d]{2})([\.\-\s])?(\d{4})([\.\-\s])?(\d{4})([\.\-\s])?(\d{4})/
 var values= ["5299 6400 0000 0000", "5299-6400-0000-0000", "5299640000000000"]
 values.forEach(value =>{ 
     console.log("Regex matchs with" + value + "? ->", pattern.test(value));
@@ -125,7 +125,7 @@ values.forEach(value =>{
 
 
 
-var pattern =/^([512345]{2}[\d]{2})([\.\-\s])?(\d{4})([\.\-\s])?(\d{4})([\.\-\s])?(\d{4})/
+var pattern =/^([51|52|53|54|55]{2}[\d]{2})([\.\-\s])?(\d{4})([\.\-\s])?(\d{4})([\.\-\s])?(\d{4})/
 var values= ["5299 6400 0000 0000", "5299-6400-0000-0000", "5299640000000000"]
 values.forEach(value =>{ 
     console.log("Regex matchs with" + value + "? ->", pattern.exec(value));
